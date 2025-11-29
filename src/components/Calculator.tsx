@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
+import ThemeToggle from "./ThemeToggle";
 
 type Operator = "+" | "-" | "×" | "÷" | null;
 
@@ -134,6 +135,11 @@ const Calculator = () => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-background">
       <div className="w-full max-w-sm">
+        {/* Theme Toggle */}
+        <div className="flex justify-end mb-4">
+          <ThemeToggle />
+        </div>
+        
         <div className="bg-card rounded-3xl shadow-2xl p-6 space-y-4">
           {/* Display */}
           <div className="bg-calc-display rounded-2xl p-6 min-h-[100px] flex items-end justify-end shadow-inner">
